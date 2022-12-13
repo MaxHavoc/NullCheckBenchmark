@@ -18,6 +18,12 @@ namespace NullCheckTest
         }
 
         [Benchmark]
+        public void UsualIfCheck()
+        {
+            nullChecks.UsualIfCheck(arg1, arg2);
+        }
+
+        [Benchmark]
         public void ExtensionCheck()
         {
             nullChecks.ExtensionCheck(arg1, arg2);

@@ -17,6 +17,14 @@ namespace NullCheckTest
 
             return arg1.Equals(arg2);
         }
+
+        public bool UsualIfCheck(object arg1, object arg2)
+        {
+            if(arg1 is null) throw new ArgumentNullException(nameof(arg1));
+            if(arg2 is null) throw new ArgumentNullException(nameof(arg2));
+
+            return arg1.Equals(arg2);
+        }
         
         public bool ExtensionCheck(object arg1, object arg2)
         {

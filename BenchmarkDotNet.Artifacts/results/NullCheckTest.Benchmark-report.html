@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>NullCheckTest.Benchmark-20221213-152724</title>
+<title>NullCheckTest.Benchmark-20221213-182241</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -24,15 +24,16 @@ Intel Core i5-8300H CPU 2.30GHz (Coffee Lake), 1 CPU, 8 logical and 4 physical c
 <table>
 <thead><tr><th>               Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Rank</th><th>Gen0</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>AttributeCheck</td><td>1.991 ns</td><td>0.0144 ns</td><td>0.0135 ns</td><td>1</td><td>-</td><td>-</td>
-</tr><tr><td>ContractCheck</td><td>2.005 ns</td><td>0.0244 ns</td><td>0.0216 ns</td><td>1</td><td>-</td><td>-</td>
-</tr><tr><td>CodeAnalysisAttribute</td><td>2.153 ns</td><td>0.0248 ns</td><td>0.0220 ns</td><td>2</td><td>-</td><td>-</td>
-</tr><tr><td>ExtensionCheck</td><td>3.182 ns</td><td>0.0181 ns</td><td>0.0151 ns</td><td>3</td><td>-</td><td>-</td>
-</tr><tr><td>UsualCheck</td><td>3.281 ns</td><td>0.0418 ns</td><td>0.0391 ns</td><td>4</td><td>-</td><td>-</td>
-</tr><tr><td>ExtensionWithoutCallerCheck</td><td>3.431 ns</td><td>0.0254 ns</td><td>0.0212 ns</td><td>5</td><td>-</td><td>-</td>
-</tr><tr><td>DawnGuardCheck</td><td>17.223 ns</td><td>0.1943 ns</td><td>0.1818 ns</td><td>6</td><td>0.0191</td><td>80 B</td>
-</tr><tr><td>ClawsCheck</td><td>25.353 ns</td><td>0.3055 ns</td><td>0.2551 ns</td><td>7</td><td>0.0382</td><td>160 B</td>
-</tr><tr><td>GuardCheck</td><td>222.433 ns</td><td>1.7686 ns</td><td>1.6544 ns</td><td>8</td><td>0.1414</td><td>592 B</td>
+</thead><tbody><tr><td>AttributeCheck</td><td>1.999 ns</td><td>0.0309 ns</td><td>0.0274 ns</td><td>1</td><td>-</td><td>-</td>
+</tr><tr><td>CodeAnalysisAttribute</td><td>2.116 ns</td><td>0.0171 ns</td><td>0.0160 ns</td><td>2</td><td>-</td><td>-</td>
+</tr><tr><td>ContractCheck</td><td>2.139 ns</td><td>0.0188 ns</td><td>0.0176 ns</td><td>2</td><td>-</td><td>-</td>
+</tr><tr><td>ExtensionCheck</td><td>3.140 ns</td><td>0.0160 ns</td><td>0.0133 ns</td><td>3</td><td>-</td><td>-</td>
+</tr><tr><td>UsualCheck</td><td>3.244 ns</td><td>0.0205 ns</td><td>0.0192 ns</td><td>4</td><td>-</td><td>-</td>
+</tr><tr><td>ExtensionWithoutCallerCheck</td><td>3.375 ns</td><td>0.0287 ns</td><td>0.0269 ns</td><td>5</td><td>-</td><td>-</td>
+</tr><tr><td>UsualIfCheck</td><td>3.412 ns</td><td>0.0189 ns</td><td>0.0177 ns</td><td>5</td><td>-</td><td>-</td>
+</tr><tr><td>DawnGuardCheck</td><td>17.099 ns</td><td>0.1443 ns</td><td>0.1205 ns</td><td>6</td><td>0.0191</td><td>80 B</td>
+</tr><tr><td>ClawsCheck</td><td>24.914 ns</td><td>0.0851 ns</td><td>0.0711 ns</td><td>7</td><td>0.0382</td><td>160 B</td>
+</tr><tr><td>GuardCheck</td><td>238.244 ns</td><td>2.2082 ns</td><td>2.0655 ns</td><td>8</td><td>0.1411</td><td>592 B</td>
 </tr></tbody></table>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>NullCheckTest.Benchmark-20221213-134539</title>
+<title>NullCheckTest.Benchmark-20221213-142647</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -15,20 +15,25 @@
 <pre><code>
 BenchmarkDotNet=v0.13.2, OS=Windows 10 (10.0.19045.2251)
 Intel Core i5-8300H CPU 2.30GHz (Coffee Lake), 1 CPU, 8 logical and 4 physical cores
-.NET SDK=7.0.100
+.NET SDK=6.0.403
   [Host]     : .NET 5.0.10 (5.0.1021.41214), X64 RyuJIT AVX2
   DefaultJob : .NET 5.0.10 (5.0.1021.41214), X64 RyuJIT AVX2
 </code></pre>
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>               Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Rank</th><th>Gen0</th><th>Allocated</th>
+<thead><tr><th>                          Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Rank</th><th>Gen0</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>UsualCheck</td><td>3.482 ns</td><td>0.0325 ns</td><td>0.0288 ns</td><td>1</td><td>-</td><td>-</td>
-</tr><tr><td>ExtensionCheck</td><td>3.879 ns</td><td>0.0210 ns</td><td>0.0197 ns</td><td>2</td><td>-</td><td>-</td>
-</tr><tr><td>AttributeCheck</td><td>4.037 ns</td><td>0.0193 ns</td><td>0.0172 ns</td><td>3</td><td>-</td><td>-</td>
-</tr><tr><td>ExtensionWithoutCallerCheck</td><td>4.067 ns</td><td>0.0176 ns</td><td>0.0147 ns</td><td>3</td><td>-</td><td>-</td>
-</tr><tr><td>GuardCheck</td><td>236.311 ns</td><td>1.7190 ns</td><td>1.5239 ns</td><td>4</td><td>0.1411</td><td>592 B</td>
+</thead><tbody><tr><td>AttributeCheck</td><td>2.012 ns</td><td>0.0221 ns</td><td>0.0185 ns</td><td>1</td><td>-</td><td>-</td>
+</tr><tr><td>ExtensionCheck</td><td>3.044 ns</td><td>0.0415 ns</td><td>0.0388 ns</td><td>2</td><td>-</td><td>-</td>
+</tr><tr><td>ExtensionWithoutCallerCheck</td><td>3.464 ns</td><td>0.0466 ns</td><td>0.0413 ns</td><td>3</td><td>-</td><td>-</td>
+</tr><tr><td>UsualCheck_NoInlining</td><td>3.525 ns</td><td>0.0229 ns</td><td>0.0203 ns</td><td>4</td><td>-</td><td>-</td>
+</tr><tr><td>UsualCheck</td><td>3.552 ns</td><td>0.1010 ns</td><td>0.1037 ns</td><td>4</td><td>-</td><td>-</td>
+</tr><tr><td>ExtensionWithoutCallerCheck_NoInlining</td><td>3.563 ns</td><td>0.0352 ns</td><td>0.0312 ns</td><td>4</td><td>-</td><td>-</td>
+</tr><tr><td>AttributeCheck_NoInlining</td><td>3.630 ns</td><td>0.0357 ns</td><td>0.0334 ns</td><td>5</td><td>-</td><td>-</td>
+</tr><tr><td>ExtensionCheck_NoInlining</td><td>3.740 ns</td><td>0.0311 ns</td><td>0.0291 ns</td><td>6</td><td>-</td><td>-</td>
+</tr><tr><td>GuardCheck_NoInlining</td><td>239.153 ns</td><td>1.6046 ns</td><td>1.5010 ns</td><td>7</td><td>0.1411</td><td>592 B</td>
+</tr><tr><td>GuardCheck</td><td>243.153 ns</td><td>1.4503 ns</td><td>1.2857 ns</td><td>8</td><td>0.1411</td><td>592 B</td>
 </tr></tbody></table>
 </body>
 </html>

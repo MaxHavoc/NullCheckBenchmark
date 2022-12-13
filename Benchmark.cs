@@ -40,5 +40,35 @@ namespace NullCheckTest
         {
             nullChecks.GuardCheck(arg1, arg2);
         }
+
+        [Benchmark]
+        public void UsualCheck_NoInlining()
+        {
+            nullChecks.UsualCheckNoInlining(arg1, arg2);
+        }
+
+        [Benchmark]
+        public void ExtensionCheck_NoInlining()
+        {
+            nullChecks.ExtensionCheckNoInlining(arg1, arg2);
+        }
+
+        [Benchmark]
+        public void ExtensionWithoutCallerCheck_NoInlining()
+        {
+            nullChecks.ExtensionWithoutCallerCheckNoInlining(arg1, arg2);
+        }
+
+        [Benchmark]
+        public void AttributeCheck_NoInlining()
+        {
+            nullChecks.AttributeCheckNoInlining(arg1, arg2);
+        }
+
+        [Benchmark]
+        public void GuardCheck_NoInlining()
+        {
+            nullChecks.GuardCheckNoInlining(arg1, arg2);
+        }
     }
 }

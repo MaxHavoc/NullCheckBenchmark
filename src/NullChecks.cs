@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Contracts;
 using System.Runtime.CompilerServices;
 using GuardClaws;
@@ -33,7 +34,7 @@ namespace NullCheckTest
             return arg1.Equals(arg2);
         }
 
-        [NotNull]
+        [AllParamsNotNull]
         public bool AttributeCheck(object arg1, object arg2)
         {
             return arg1.Equals(arg2);
@@ -54,7 +55,7 @@ namespace NullCheckTest
             return arg1.Equals(arg2);
         }
         
-        public bool CodeAnalysisAttribute([System.Diagnostics.CodeAnalysis.NotNull] object arg1, [System.Diagnostics.CodeAnalysis.NotNull] object arg2)
+        public bool CodeAnalysisAttribute([NotNull] object arg1, [NotNull] object arg2)
         {
             return arg1.Equals(arg2);
         }

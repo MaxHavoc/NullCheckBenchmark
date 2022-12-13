@@ -5,7 +5,7 @@ using System.Reflection;
 namespace NullCheckTest.src
 {
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Constructor)]
-    public class NotNullAttribute : Attribute
+    public class AllParamsNotNullAttribute : Attribute
     {
         public void Validate(object instance, MethodBase method, object[] parameters)
         {

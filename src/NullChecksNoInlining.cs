@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Contracts;
 using System.Runtime.CompilerServices;
 using GuardClaws;
@@ -36,7 +37,7 @@ namespace NullCheckTest
             return arg1.Equals(arg2);
         }
 
-        [NotNull]
+        [AllParamsNotNull]
         [MethodImpl(MethodImplOptions.NoInlining)] 
         public bool AttributeCheckNoInlining(object arg1, object arg2)
         {
@@ -61,7 +62,7 @@ namespace NullCheckTest
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)] 
-        public bool CodeAnalysisAttribute_NoInlining([System.Diagnostics.CodeAnalysis.NotNull] object arg1, [System.Diagnostics.CodeAnalysis.NotNull] object arg2)
+        public bool CodeAnalysisAttribute_NoInlining([NotNull] object arg1, [NotNull] object arg2)
         {
             return arg1.Equals(arg2);
         }

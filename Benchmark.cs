@@ -70,5 +70,29 @@ namespace NullCheckTest
         {
             nullChecks.GuardCheckNoInlining(arg1, arg2);
         }
+
+        [Benchmark]
+        public void ClawsCheck_NoInlining()
+        {
+            nullChecks.ClawsCheck_NoInlining(arg1, arg2);
+        }
+
+        [Benchmark]
+        public void ClawsCheck()
+        {
+            nullChecks.ClawsCheck(arg1, arg2);
+        }
+
+        [Benchmark]
+        public void DawnGuardCheck()
+        {
+            nullChecks.DawnGuardCheck(arg1, arg2);
+        }
+
+        [Benchmark]
+        public void DawnGuardCheck_NoInlining()
+        {
+            nullChecks.DawnGuardCheck_NoInlining(arg1, arg2);
+        }
     }
 }

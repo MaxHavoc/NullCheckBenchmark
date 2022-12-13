@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.CompilerServices;
+using GuardClaws;
 using GuardNet;
 using NullCheckTest.src;
 
@@ -84,6 +85,38 @@ namespace NullCheckTest
         {
             Guard.NotNull(arg1, nameof(arg1));
             Guard.NotNull(arg2, nameof(arg2));
+
+            return arg1.Equals(arg2);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)] 
+        public bool ClawsCheck_NoInlining(object arg1, object arg2)
+        {
+            Claws.NotNull(() => arg1);   
+            Claws.NotNull(() => arg2);   
+
+            return arg1.Equals(arg2);
+        }
+        public bool ClawsCheck(object arg1, object arg2)
+        {
+            Claws.NotNull(() => arg1);   
+            Claws.NotNull(() => arg2);   
+
+            return arg1.Equals(arg2);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)] 
+        public bool DawnGuardCheck_NoInlining(object arg1, object arg2)
+        {
+            Dawn.Guard.Argument(arg1, nameof(arg1)).NotNull();
+            Dawn.Guard.Argument(arg2, nameof(arg2)).NotNull();
+
+            return arg1.Equals(arg2);
+        }
+        public bool DawnGuardCheck(object arg1, object arg2)
+        {
+            Dawn.Guard.Argument(arg1, nameof(arg1)).NotNull();
+            Dawn.Guard.Argument(arg2, nameof(arg2)).NotNull();
 
             return arg1.Equals(arg2);
         }

@@ -8,6 +8,7 @@ namespace NullCheckTest
     public class Benchmark
     {
         private static readonly NullChecks nullChecks = new NullChecks();
+        //private static readonly NullChecksNoInlining nullChecks = new NullChecksNoInlining();
         private static readonly object arg1 = new object();
         private static readonly object arg2 = new object();
 

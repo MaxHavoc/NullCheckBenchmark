@@ -35,46 +35,17 @@ namespace NullCheckTest
             nullChecks.AttributeCheck(arg1, arg2);
         }
 
+        
         [Benchmark]
-        public void GuardCheck()
+        public void ContractCheck()
         {
-            nullChecks.GuardCheck(arg1, arg2);
+            nullChecks.ContractCheck(arg1, arg2);
         }
 
         [Benchmark]
-        public void UsualCheck_NoInlining()
+        public void CodeAnalysisAttribute()
         {
-            nullChecks.UsualCheckNoInlining(arg1, arg2);
-        }
-
-        [Benchmark]
-        public void ExtensionCheck_NoInlining()
-        {
-            nullChecks.ExtensionCheckNoInlining(arg1, arg2);
-        }
-
-        [Benchmark]
-        public void ExtensionWithoutCallerCheck_NoInlining()
-        {
-            nullChecks.ExtensionWithoutCallerCheckNoInlining(arg1, arg2);
-        }
-
-        [Benchmark]
-        public void AttributeCheck_NoInlining()
-        {
-            nullChecks.AttributeCheckNoInlining(arg1, arg2);
-        }
-
-        [Benchmark]
-        public void GuardCheck_NoInlining()
-        {
-            nullChecks.GuardCheckNoInlining(arg1, arg2);
-        }
-
-        [Benchmark]
-        public void ClawsCheck_NoInlining()
-        {
-            nullChecks.ClawsCheck_NoInlining(arg1, arg2);
+            nullChecks.CodeAnalysisAttribute(arg1, arg2);
         }
 
         [Benchmark]
@@ -90,9 +61,10 @@ namespace NullCheckTest
         }
 
         [Benchmark]
-        public void DawnGuardCheck_NoInlining()
+        public void GuardCheck()
         {
-            nullChecks.DawnGuardCheck_NoInlining(arg1, arg2);
+            nullChecks.GuardCheck(arg1, arg2);
         }
+
     }
 }
